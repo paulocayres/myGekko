@@ -1,4 +1,5 @@
 // required indicators
+
 var SMMA = require('./SMMA.js');
 
 var Indicator = function (settings) {

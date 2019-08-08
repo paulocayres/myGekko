@@ -1,9 +1,9 @@
 // If you want to use your own trading methods you can
 // write them here. For more information on everything you
 // can use please refer to this document:
-// 
+//
 // https://github.com/askmike/gekko/blob/stable/docs/trading_methods.md
-// 
+//
 // The example below is pretty stupid: on every new candle there is
 // a 10% chance it will recommand to change your position (to either
 // long or short).
@@ -45,7 +45,7 @@ method.update = function(candle) {
 
 
 method.log = function() {
-  
+
 }
 
 // Based on the newly calculated
@@ -56,11 +56,11 @@ method.check = function() {
   var result = this.talibIndicators.macd.result;
   var macddiff = result['outMACD'] - result['outMACDSignal'];
 
-  if(settings.thresholds.down > macddiff && this.currentTrend !== 'short') {
+  if(settings.down > macddiff && this.currentTrend !== 'short') {
     this.currentTrend = 'short';
     this.advice('short');
 
-  } else if(settings.thresholds.up < macddiff && this.currentTrend !== 'long'){
+  } else if(settings.up < macddiff && this.currentTrend !== 'long'){
     this.currentTrend = 'long';
     this.advice('long');
 
