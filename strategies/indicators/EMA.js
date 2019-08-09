@@ -6,6 +6,7 @@
 }
 
 
+
 Indicator.prototype.update = function(price) {
   // 第一次进入，无法计算EMA值，因为没有yesterday
   if(this.result === false)

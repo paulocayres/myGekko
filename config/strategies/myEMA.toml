@@ -1,3 +1,5 @@
-period = 20
+period = 30
 smooth = 1
-persistence = 5
+persistence = 6
+stop = 5
+fraction = 6

@@ -29,7 +29,8 @@ Indicator.prototype.calculate = function(price) {
   var y = this.result;
 
   // calculation
-  this.result = price * k + y * (1 - k);
+  this.result = (price - y) * k + y;
+  //console.log(this.result);
 }
 
 module.exports = Indicator;
